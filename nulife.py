@@ -246,16 +246,16 @@ def liftOff(lifechoice, zipcode, salary, carbool, trans, paymentsbool, cartype, 
 		avg_house = avg_house/i
 
 		energy = data['energy_raw']
-		elec = search('electricity price \\| {:f}', energy).fixed
-		nat = search('natural gas price \\| ${:f} per', energy).fixed
+		elect = search('electricity price \\| {:f}', energy).fixed
+		natural = search('natural gas price \\| ${:f} per', energy).fixed
 
 		#hous_neat = hous_raw.splitlines()
 		
-		elec = " " + str(elec)
-		elec = remove(elec)
+		elect = " " + str(elect)
+		elect = remove(elec)
 
-		nat = " " + str(nat)
-		nat = remove(nat)
+		natural = " " + str(natural)
+		natural = remove(nat)
 
 		milk = data['local_milk']
 		utilities = data['local_utilities']
@@ -270,6 +270,9 @@ def liftOff(lifechoice, zipcode, salary, carbool, trans, paymentsbool, cartype, 
 	else:
 		
 		month_bal -= groceries
+		month_bal = month_bal - elec - nat - gas
+
+		return jsonify(milk = milk, sal_af_tax = sal_af_tax, saved_monthly = saved_monthly, month_bal = month_bal)
 
 
 @app.route('/', methods = ['GET', 'POST'])
