@@ -102,6 +102,10 @@ def calculate(zip_code, salary):
 	return final_data
 
 
+def remove(item):
+	i1, i2 = item.split('(')
+	i3, i4 = i2.split(',')
+	return i3
 
 
 @app.route('/', methods = ['GET', 'POST'])
@@ -116,13 +120,19 @@ def index():
 		print data
 
 		energy = data['energy_final']
-		codecs.open(energy, "r", encoding="cp1252")
-		search('electricity price | {:d}', energy)
+		elec = search('electricity price \\| {:f}', energy).fixed
+		nat = search('natural gas price \\| ${:f} per', energy).fixed
+		
+		elec = " " + str(elec)
+		elec = remove(elec)
+
+		nat = " " + str(nat)
+		nat = remove(nat)
 
 		milk = data['local_milk']
 		utilities = data['local_utilities']
 
-		return render_template('results.html', energy = energy, milk = milk, utilities = utilities )
+		return render_template('results.html', elec = elec, milk = milk, utilities = utilities, nat = nat )
 
 	else:
 
