@@ -1,0 +1,1629 @@
+{
+  "name": "col-index",
+  "count": 323,
+  "frequency": "daily",
+  "version": 1,
+  "newdata": true,
+  "lastrunstatus": "success",
+  "lastsuccess": "Sat Apr 26 2014 07:52:54 GMT+0000 (UTC)",
+  "nextrun": "Sun Apr 27 2014 07:52:50 GMT+0000 (UTC)",
+  "results": {
+    "collection1": [
+      {
+        "location": "Albany, GA",
+        "utility_index": "82.0",
+        "grocery_index": "108.7"
+      },
+      {
+        "location": "Albany, NY",
+        "utility_index": "101.0",
+        "grocery_index": "105.0"
+      },
+      {
+        "location": "Alexandria, LA",
+        "utility_index": "89.9",
+        "grocery_index": "96.0"
+      },
+      {
+        "location": "Amarillo, TX",
+        "utility_index": "80.4",
+        "grocery_index": "89.9"
+      },
+      {
+        "location": "Americus, GA",
+        "utility_index": "88.2",
+        "grocery_index": "105.5"
+      },
+      {
+        "location": "Ames, IA",
+        "utility_index": "82.3",
+        "grocery_index": "93.7"
+      },
+      {
+        "location": "Anchorage, AK",
+        "utility_index": "94.1",
+        "grocery_index": "134.5"
+      },
+      {
+        "location": "Anderson, SC",
+        "utility_index": "101.6",
+        "grocery_index": "103.4"
+      },
+      {
+        "location": "Appleton, WI",
+        "utility_index": "102.3",
+        "grocery_index": "93.0"
+      },
+      {
+        "location": "Ardmore, OK",
+        "utility_index": "84.8",
+        "grocery_index": "92.9"
+      },
+      {
+        "location": "Arlington, TX",
+        "utility_index": "109.9",
+        "grocery_index": "94.4"
+      },
+      {
+        "location": "Asheville, NC",
+        "utility_index": "113.1",
+        "grocery_index": "104.6"
+      },
+      {
+        "location": "Ashland, OH",
+        "utility_index": "92.1",
+        "grocery_index": "100.7"
+      },
+      {
+        "location": "Atlanta, GA",
+        "utility_index": "86.3",
+        "grocery_index": "96.2"
+      },
+      {
+        "location": "Auburn-Opelika, AL",
+        "utility_index": "101.3",
+        "grocery_index": "104.6"
+      },
+      {
+        "location": "Augusta-Aiken, GA-SC",
+        "utility_index": "92.1",
+        "grocery_index": "106.0"
+      },
+      {
+        "location": "Austin, TX",
+        "utility_index": "110.7",
+        "grocery_index": "89.3"
+      },
+      {
+        "location": "Bakersfield, CA",
+        "utility_index": "104.3",
+        "grocery_index": "107.6"
+      },
+      {
+        "location": "Baltimore, MD",
+        "utility_index": "112.5",
+        "grocery_index": "110.8"
+      },
+      {
+        "location": "Baton Rouge, LA",
+        "utility_index": "78.2",
+        "grocery_index": "100.4"
+      },
+      {
+        "location": "Beaufort, SC",
+        "utility_index": "114.3",
+        "grocery_index": "106.9"
+      },
+      {
+        "location": "Beaumont, TX",
+        "utility_index": "92.5",
+        "grocery_index": "87.1"
+      },
+      {
+        "location": "Bellingham, WA",
+        "utility_index": "83.8",
+        "grocery_index": "114.9"
+      },
+      {
+        "location": "Bergen-Passaic, NJ",
+        "utility_index": "128.9",
+        "grocery_index": "112.1"
+      },
+      {
+        "location": "Bethesda-Gaithersburg-Frederick, MD",
+        "utility_index": "120.6",
+        "grocery_index": "108.5"
+      },
+      {
+        "location": "Binghamton, NY",
+        "utility_index": "112.8",
+        "grocery_index": "92.4"
+      },
+      {
+        "location": "Birmingham, AL",
+        "utility_index": "105.7",
+        "grocery_index": "93.5"
+      },
+      {
+        "location": "Bismarck-Mandan, ND",
+        "utility_index": "70.1",
+        "grocery_index": "105.9"
+      },
+      {
+        "location": "Blacksburg, VA",
+        "utility_index": "102.3",
+        "grocery_index": "91.5"
+      },
+      {
+        "location": "Boise, ID",
+        "utility_index": "99.6",
+        "grocery_index": "98.5"
+      },
+      {
+        "location": "Boston, MA",
+        "utility_index": "138.6",
+        "grocery_index": "116.7"
+      },
+      {
+        "location": "Bowling Green, KY",
+        "utility_index": "104.3",
+        "grocery_index": "93.3"
+      },
+      {
+        "location": "Bozeman, MT",
+        "utility_index": "89.1",
+        "grocery_index": "107.3"
+      },
+      {
+        "location": "Bradenton, FL",
+        "utility_index": "90.4",
+        "grocery_index": "106.6"
+      },
+      {
+        "location": "Brazoria County, TX",
+        "utility_index": "100.8",
+        "grocery_index": "87.9"
+      },
+      {
+        "location": "Brownsville, TX",
+        "utility_index": "93.1",
+        "grocery_index": "88.6"
+      },
+      {
+        "location": "Buffalo, NY",
+        "utility_index": "115.6",
+        "grocery_index": "91.8"
+      },
+      {
+        "location": "Burlington, IA",
+        "utility_index": "108.6",
+        "grocery_index": "93.8"
+      },
+      {
+        "location": "Burlington, NC",
+        "utility_index": "82.3",
+        "grocery_index": "98.6"
+      },
+      {
+        "location": "Burlington-Chittenden, VT",
+        "utility_index": "122.2",
+        "grocery_index": "112.9"
+      },
+      {
+        "location": "Camden, SC",
+        "utility_index": "107.5",
+        "grocery_index": "103.4"
+      },
+      {
+        "location": "Fort Myers, FL",
+        "utility_index": "83.7",
+        "grocery_index": "107.9"
+      },
+      {
+        "location": "Carlsbad, NM",
+        "utility_index": "99.3",
+        "grocery_index": "102.6"
+      },
+      {
+        "location": "Cedar City, UT",
+        "utility_index": "83.7",
+        "grocery_index": "102.5"
+      },
+      {
+        "location": "Cedar Rapids, IA",
+        "utility_index": "101.6",
+        "grocery_index": "94.8"
+      },
+      {
+        "location": "Champaign-Urbana, IL",
+        "utility_index": "97.1",
+        "grocery_index": "98.5"
+      },
+      {
+        "location": "Chapel Hill, NC",
+        "utility_index": "85.7",
+        "grocery_index": "100.9"
+      },
+      {
+        "location": "Charleston, WV",
+        "utility_index": "96.7",
+        "grocery_index": "88.8"
+      },
+      {
+        "location": "Charleston, SC",
+        "utility_index": "96.6",
+        "grocery_index": "105.7"
+      },
+      {
+        "location": "Charlotte, NC",
+        "utility_index": "91.2",
+        "grocery_index": "97.1"
+      },
+      {
+        "location": "Charlottesville, VA",
+        "utility_index": "100.8",
+        "grocery_index": "101.2"
+      },
+      {
+        "location": "Chattanooga, TN",
+        "utility_index": "82.5",
+        "grocery_index": "97.4"
+      },
+      {
+        "location": "Cheyenne, WY",
+        "utility_index": "96.3",
+        "grocery_index": "101.7"
+      },
+      {
+        "location": "Chicago, IL",
+        "utility_index": "117.3",
+        "grocery_index": "111.2"
+      },
+      {
+        "location": "Cincinnati, OH",
+        "utility_index": "103.8",
+        "grocery_index": "96.4"
+      },
+      {
+        "location": "Clarksburg, WV",
+        "utility_index": "92.2",
+        "grocery_index": "95.2"
+      },
+      {
+        "location": "Clarksville, TN",
+        "utility_index": "86.5",
+        "grocery_index": "87.9"
+      },
+      {
+        "location": "Cleveland, OH",
+        "utility_index": "109.0",
+        "grocery_index": "108.1"
+      },
+      {
+        "location": "Cleveland, TN",
+        "utility_index": "103.4",
+        "grocery_index": "101.6"
+      },
+      {
+        "location": "Colorado Springs, CO",
+        "utility_index": "86.8",
+        "grocery_index": "95.4"
+      },
+      {
+        "location": "Columbia, MO",
+        "utility_index": "90.4",
+        "grocery_index": "92.6"
+      },
+      {
+        "location": "Columbia, SC",
+        "utility_index": "109.0",
+        "grocery_index": "105.2"
+      },
+      {
+        "location": "Columbus, OH",
+        "utility_index": "100.2",
+        "grocery_index": "91.6"
+      },
+      {
+        "location": "Conroe, TX",
+        "utility_index": "96.1",
+        "grocery_index": "89.4"
+      },
+      {
+        "location": "Conway, AR",
+        "utility_index": "92.0",
+        "grocery_index": "97.9"
+      },
+      {
+        "location": "Cookeville, TN",
+        "utility_index": "82.9",
+        "grocery_index": "86.7"
+      },
+      {
+        "location": "Corpus Christi, TX",
+        "utility_index": "113.5",
+        "grocery_index": "82.4"
+      },
+      {
+        "location": "Covington, KY",
+        "utility_index": "100.2",
+        "grocery_index": "86.0"
+      },
+      {
+        "location": "Dallas, TX",
+        "utility_index": "105.5",
+        "grocery_index": "96.2"
+      },
+      {
+        "location": "Danville, IL",
+        "utility_index": "116.4",
+        "grocery_index": "94.6"
+      },
+      {
+        "location": "Dare County, NC",
+        "utility_index": "92.9",
+        "grocery_index": "111.7"
+      },
+      {
+        "location": "Davenport-Moline-Rock, IL",
+        "utility_index": "81.4",
+        "grocery_index": "98.7"
+      },
+      {
+        "location": "Dayton, OH",
+        "utility_index": "106.1",
+        "grocery_index": "89.2"
+      },
+      {
+        "location": "Decatur, IL",
+        "utility_index": "92.2",
+        "grocery_index": "89.1"
+      },
+      {
+        "location": "Decatur-Hartselle, AL",
+        "utility_index": "90.6",
+        "grocery_index": "98.5"
+      },
+      {
+        "location": "Denver, CO",
+        "utility_index": "101.9",
+        "grocery_index": "101.0"
+      },
+      {
+        "location": "Des Moines, IA",
+        "utility_index": "90.2",
+        "grocery_index": "90.9"
+      },
+      {
+        "location": "Detroit, MI",
+        "utility_index": "129.5",
+        "grocery_index": "92.7"
+      },
+      {
+        "location": "Dodge City, KS",
+        "utility_index": "85.5",
+        "grocery_index": "90.0"
+      },
+      {
+        "location": "Dothan, AL",
+        "utility_index": "79.7",
+        "grocery_index": "100.3"
+      },
+      {
+        "location": "Douglas, GA",
+        "utility_index": "97.9",
+        "grocery_index": "104.1"
+      },
+      {
+        "location": "Dover, DE",
+        "utility_index": "108.8",
+        "grocery_index": "110.4"
+      },
+      {
+        "location": "Dubuque, IA",
+        "utility_index": "105.2",
+        "grocery_index": "98.1"
+      },
+      {
+        "location": "Durham, NC",
+        "utility_index": "96.3",
+        "grocery_index": "97.9"
+      },
+      {
+        "location": "Dutchess County, NY",
+        "utility_index": "118.8",
+        "grocery_index": "109.8"
+      },
+      {
+        "location": "Dyersburg, TN",
+        "utility_index": "95.2",
+        "grocery_index": "93.4"
+      },
+      {
+        "location": "Eau Claire, WI",
+        "utility_index": "84.8",
+        "grocery_index": "97.6"
+      },
+      {
+        "location": "Edmond, OK",
+        "utility_index": "90.2",
+        "grocery_index": "88.7"
+      },
+      {
+        "location": "El Paso, TX",
+        "utility_index": "88.1",
+        "grocery_index": "99.9"
+      },
+      {
+        "location": "Elkhart-Goshen, IN",
+        "utility_index": "84.5",
+        "grocery_index": "91.4"
+      },
+      {
+        "location": "Enid, OK",
+        "utility_index": "96.1",
+        "grocery_index": "103.5"
+      },
+      {
+        "location": "Erie, PA",
+        "utility_index": "96.0",
+        "grocery_index": "96.4"
+      },
+      {
+        "location": "Eugene, OR",
+        "utility_index": "85.3",
+        "grocery_index": "93.8"
+      },
+      {
+        "location": "Evansville, IN",
+        "utility_index": "120.0",
+        "grocery_index": "97.9"
+      },
+      {
+        "location": "Everett, WA",
+        "utility_index": "85.4",
+        "grocery_index": "112.0"
+      },
+      {
+        "location": "Fairbanks, AK",
+        "utility_index": "193.1",
+        "grocery_index": "127.9"
+      },
+      {
+        "location": "Fargo-Moorhead, ND-MN",
+        "utility_index": "78.7",
+        "grocery_index": "99.8"
+      },
+      {
+        "location": "Farmington, NM",
+        "utility_index": "87.1",
+        "grocery_index": "101.8"
+      },
+      {
+        "location": "Fayetteville, AR",
+        "utility_index": "99.8",
+        "grocery_index": "95.3"
+      },
+      {
+        "location": "Fayetteville, NC",
+        "utility_index": "92.8",
+        "grocery_index": "105.1"
+      },
+      {
+        "location": "Findlay, OH",
+        "utility_index": "95.8",
+        "grocery_index": "102.3"
+      },
+      {
+        "location": "Fitchburg-Leominster, MA",
+        "utility_index": "140.6",
+        "grocery_index": "99.3"
+      },
+      {
+        "location": "Flagstaff, AZ",
+        "utility_index": "92.5",
+        "grocery_index": "106.6"
+      },
+      {
+        "location": "Florence, AL",
+        "utility_index": "91.0",
+        "grocery_index": "96.6"
+      },
+      {
+        "location": "Fort Lauderdale, FL",
+        "utility_index": "92.5",
+        "grocery_index": "112.5"
+      },
+      {
+        "location": "Fort Smith, AR",
+        "utility_index": "90.5",
+        "grocery_index": "92.5"
+      },
+      {
+        "location": "Fort Wayne-Allen County, IN",
+        "utility_index": "87.3",
+        "grocery_index": "93.3"
+      },
+      {
+        "location": "Fort Worth, TX",
+        "utility_index": "106.2",
+        "grocery_index": "89.8"
+      },
+      {
+        "location": "Framingham-Natick, MA",
+        "utility_index": "131.9",
+        "grocery_index": "109.4"
+      },
+      {
+        "location": "Fresno, CA",
+        "utility_index": "123.6",
+        "grocery_index": "115.8"
+      },
+      {
+        "location": "Gainesville, FL",
+        "utility_index": "99.2",
+        "grocery_index": "106.3"
+      },
+      {
+        "location": "Galesburg, IL",
+        "utility_index": "103.1",
+        "grocery_index": "99.7"
+      },
+      {
+        "location": "Garden City, KS",
+        "utility_index": "86.5",
+        "grocery_index": "91.2"
+      },
+      {
+        "location": "Glens Falls, NY",
+        "utility_index": "128.0",
+        "grocery_index": "105.4"
+      },
+      {
+        "location": "Glenwood Springs, CO",
+        "utility_index": "89.0",
+        "grocery_index": "103.3"
+      },
+      {
+        "location": "Grand Junction, CO",
+        "utility_index": "86.4",
+        "grocery_index": "101.9"
+      },
+      {
+        "location": "Grand Rapids, MI",
+        "utility_index": "100.6",
+        "grocery_index": "102.7"
+      },
+      {
+        "location": "Green Bay, WI",
+        "utility_index": "118.6",
+        "grocery_index": "88.8"
+      },
+      {
+        "location": "Greenville, NC",
+        "utility_index": "108.5",
+        "grocery_index": "105.9"
+      },
+      {
+        "location": "Greenville, SC",
+        "utility_index": "90.1",
+        "grocery_index": "102.7"
+      },
+      {
+        "location": "Gunnison, CO",
+        "utility_index": "85.7",
+        "grocery_index": "110.6"
+      },
+      {
+        "location": "Hammond, LA",
+        "utility_index": "84.8",
+        "grocery_index": "99.0"
+      },
+      {
+        "location": "Hampton, VA",
+        "utility_index": "108.4",
+        "grocery_index": "106.6"
+      },
+      {
+        "location": "Harlingen, TX",
+        "utility_index": "105.6",
+        "grocery_index": "81.5"
+      },
+      {
+        "location": "Harrisburg, PA",
+        "utility_index": "110.5",
+        "grocery_index": "97.8"
+      },
+      {
+        "location": "Harrisonburg, VA",
+        "utility_index": "96.8",
+        "grocery_index": "97.5"
+      },
+      {
+        "location": "Hartford, CT",
+        "utility_index": "120.7",
+        "grocery_index": "120.7"
+      },
+      {
+        "location": "Hastings, NE",
+        "utility_index": "94.0",
+        "grocery_index": "103.7"
+      },
+      {
+        "location": "Hattiesburg, MS",
+        "utility_index": "110.3",
+        "grocery_index": "100.5"
+      },
+      {
+        "location": "Hays, KS",
+        "utility_index": "92.4",
+        "grocery_index": "92.0"
+      },
+      {
+        "location": "Hickory, NC",
+        "utility_index": "92.3",
+        "grocery_index": "101.1"
+      },
+      {
+        "location": "Hilton Head Island, SC",
+        "utility_index": "100.4",
+        "grocery_index": "111.4"
+      },
+      {
+        "location": "Honolulu, HI",
+        "utility_index": "146.6",
+        "grocery_index": "160.1"
+      },
+      {
+        "location": "Hot Springs, AR",
+        "utility_index": "95.7",
+        "grocery_index": "97.3"
+      },
+      {
+        "location": "Houston, TX",
+        "utility_index": "97.7",
+        "grocery_index": "85.1"
+      },
+      {
+        "location": "Huntsville, AL",
+        "utility_index": "86.1",
+        "grocery_index": "94.9"
+      },
+      {
+        "location": "Hutchinson, KS",
+        "utility_index": "84.4",
+        "grocery_index": "89.0"
+      },
+      {
+        "location": "Idaho Falls, ID",
+        "utility_index": "84.9",
+        "grocery_index": "99.5"
+      },
+      {
+        "location": "Indiana County, PA",
+        "utility_index": "97.7",
+        "grocery_index": "99.7"
+      },
+      {
+        "location": "Indianapolis, IN",
+        "utility_index": "86.7",
+        "grocery_index": "91.4"
+      },
+      {
+        "location": "Iowa City, IA",
+        "utility_index": "80.1",
+        "grocery_index": "94.9"
+      },
+      {
+        "location": "Ithaca, NY",
+        "utility_index": "110.4",
+        "grocery_index": "102.9"
+      },
+      {
+        "location": "Jackson, MS",
+        "utility_index": "118.1",
+        "grocery_index": "93.0"
+      },
+      {
+        "location": "Jackson-Madison County, TN",
+        "utility_index": "98.9",
+        "grocery_index": "91.1"
+      },
+      {
+        "location": "Jacksonville, FL",
+        "utility_index": "91.9",
+        "grocery_index": "102.8"
+      },
+      {
+        "location": "Jacksonville, NC",
+        "utility_index": "99.2",
+        "grocery_index": "103.2"
+      },
+      {
+        "location": "Janesville, WI",
+        "utility_index": "99.3",
+        "grocery_index": "95.0"
+      },
+      {
+        "location": "Jefferson City, MO",
+        "utility_index": "97.6",
+        "grocery_index": "93.9"
+      },
+      {
+        "location": "Johnson City, TN",
+        "utility_index": "89.1",
+        "grocery_index": "92.3"
+      },
+      {
+        "location": "Johnstown, PA",
+        "utility_index": "101.0",
+        "grocery_index": "97.7"
+      },
+      {
+        "location": "Joliet-Will County, IL",
+        "utility_index": "116.1",
+        "grocery_index": "100.9"
+      },
+      {
+        "location": "Jonesboro, AR",
+        "utility_index": "91.1",
+        "grocery_index": "97.5"
+      },
+      {
+        "location": "Joplin, MO",
+        "utility_index": "108.1",
+        "grocery_index": "92.2"
+      },
+      {
+        "location": "Juneau, AK",
+        "utility_index": "135.1",
+        "grocery_index": "133.1"
+      },
+      {
+        "location": "Kalamazoo, MI",
+        "utility_index": "101.8",
+        "grocery_index": "95.6"
+      },
+      {
+        "location": "Kalispell, MT",
+        "utility_index": "82.0",
+        "grocery_index": "116.3"
+      },
+      {
+        "location": "Kansas City, KS",
+        "utility_index": "99.8",
+        "grocery_index": "94.8"
+      },
+      {
+        "location": "Kennewick-Richland-Pasco, WA",
+        "utility_index": "85.1",
+        "grocery_index": "90.9"
+      },
+      {
+        "location": "Kinston, NC",
+        "utility_index": "108.8",
+        "grocery_index": "102.5"
+      },
+      {
+        "location": "Knoxville, TN",
+        "utility_index": "95.1",
+        "grocery_index": "91.4"
+      },
+      {
+        "location": "Kodiak, AK",
+        "utility_index": "131.9",
+        "grocery_index": "149.4"
+      },
+      {
+        "location": "Lafayette, IN",
+        "utility_index": "116.5",
+        "grocery_index": "95.6"
+      },
+      {
+        "location": "Lafayette, LA",
+        "utility_index": "81.2",
+        "grocery_index": "93.5"
+      },
+      {
+        "location": "Lake Charles, LA",
+        "utility_index": "89.5",
+        "grocery_index": "99.8"
+      },
+      {
+        "location": "Lake Havasu City, AZ",
+        "utility_index": "95.9",
+        "grocery_index": "107.0"
+      },
+      {
+        "location": "Lancaster, PA",
+        "utility_index": "111.0",
+        "grocery_index": "101.3"
+      },
+      {
+        "location": "Laramie, WY",
+        "utility_index": "90.5",
+        "grocery_index": "105.1"
+      },
+      {
+        "location": "Las Cruces, NM",
+        "utility_index": "93.7",
+        "grocery_index": "103.7"
+      },
+      {
+        "location": "Las Vegas, NV",
+        "utility_index": "97.7",
+        "grocery_index": "106.8"
+      },
+      {
+        "location": "Lawrence, KS",
+        "utility_index": "91.9",
+        "grocery_index": "89.1"
+      },
+      {
+        "location": "Lawton, OK",
+        "utility_index": "87.5",
+        "grocery_index": "96.3"
+      },
+      {
+        "location": "Lexington, KY",
+        "utility_index": "93.9",
+        "grocery_index": "86.9"
+      },
+      {
+        "location": "Lexington-Buena Vista-Rockbridge, VA",
+        "utility_index": "94.3",
+        "grocery_index": "92.1"
+      },
+      {
+        "location": "Lima, OH",
+        "utility_index": "102.5",
+        "grocery_index": "101.9"
+      },
+      {
+        "location": "Little Rock, AR",
+        "utility_index": "104.1",
+        "grocery_index": "92.9"
+      },
+      {
+        "location": "Logan, UT",
+        "utility_index": "85.3",
+        "grocery_index": "104.7"
+      },
+      {
+        "location": "Los Alamos, NM",
+        "utility_index": "91.2",
+        "grocery_index": "97.1"
+      },
+      {
+        "location": "Los Angeles, CA",
+        "utility_index": "101.7",
+        "grocery_index": "106.0"
+      },
+      {
+        "location": "Louisville, KY",
+        "utility_index": "99.1",
+        "grocery_index": "81.6"
+      },
+      {
+        "location": "Loveland, CO",
+        "utility_index": "89.6",
+        "grocery_index": "102.7"
+      },
+      {
+        "location": "Lubbock, TX",
+        "utility_index": "74.8",
+        "grocery_index": "90.0"
+      },
+      {
+        "location": "Lufkin, TX",
+        "utility_index": "98.7",
+        "grocery_index": "87.8"
+      },
+      {
+        "location": "Lynchburg, VA",
+        "utility_index": "109.7",
+        "grocery_index": "90.7"
+      },
+      {
+        "location": "Manchester, NH",
+        "utility_index": "124.5",
+        "grocery_index": "102.3"
+      },
+      {
+        "location": "Manhattan, KS",
+        "utility_index": "86.9",
+        "grocery_index": "92.5"
+      },
+      {
+        "location": "Mankato, MN",
+        "utility_index": "113.5",
+        "grocery_index": "93.8"
+      },
+      {
+        "location": "Marietta, GA",
+        "utility_index": "90.3",
+        "grocery_index": "96.8"
+      },
+      {
+        "location": "Marion-McDowell County, NC",
+        "utility_index": "94.0",
+        "grocery_index": "103.1"
+      },
+      {
+        "location": "Marshfield, WI",
+        "utility_index": "99.9",
+        "grocery_index": "95.3"
+      },
+      {
+        "location": "Martinsburg-Berkeley County, WV",
+        "utility_index": "85.9",
+        "grocery_index": "91.5"
+      },
+      {
+        "location": "Martinsville-Henry County, VA",
+        "utility_index": "89.1",
+        "grocery_index": "94.0"
+      },
+      {
+        "location": "Mason City, IA",
+        "utility_index": "105.6",
+        "grocery_index": "89.4"
+      },
+      {
+        "location": "McAllen, TX",
+        "utility_index": "103.1",
+        "grocery_index": "79.8"
+      },
+      {
+        "location": "Memphis, TN",
+        "utility_index": "86.9",
+        "grocery_index": "92.7"
+      },
+      {
+        "location": "Miami, FL",
+        "utility_index": "91.9",
+        "grocery_index": "110.9"
+      },
+      {
+        "location": "Middlesex-Monmouth, NJ",
+        "utility_index": "128.6",
+        "grocery_index": "108.9"
+      },
+      {
+        "location": "Midland, TX",
+        "utility_index": "93.4",
+        "grocery_index": "89.7"
+      },
+      {
+        "location": "Milwaukee-Waukesha, WI",
+        "utility_index": "98.6",
+        "grocery_index": "98.1"
+      },
+      {
+        "location": "Minneapolis, MN",
+        "utility_index": "104.7",
+        "grocery_index": "111.6"
+      },
+      {
+        "location": "Minot, ND",
+        "utility_index": "73.5",
+        "grocery_index": "99.3"
+      },
+      {
+        "location": "Missoula, MT",
+        "utility_index": "98.3",
+        "grocery_index": "110.2"
+      },
+      {
+        "location": "Mobile, AL",
+        "utility_index": "104.4",
+        "grocery_index": "102.7"
+      },
+      {
+        "location": "Monroe, LA",
+        "utility_index": "89.1",
+        "grocery_index": "95.8"
+      },
+      {
+        "location": "Montgomery, AL",
+        "utility_index": "108.4",
+        "grocery_index": "102.9"
+      },
+      {
+        "location": "Morgantown, WV",
+        "utility_index": "89.9",
+        "grocery_index": "93.9"
+      },
+      {
+        "location": "Morristown, TN",
+        "utility_index": "80.5",
+        "grocery_index": "91.6"
+      },
+      {
+        "location": "Muncie, IN",
+        "utility_index": "98.5",
+        "grocery_index": "91.0"
+      },
+      {
+        "location": "Murfreesboro-Smyrna, TN",
+        "utility_index": "81.0",
+        "grocery_index": "94.3"
+      },
+      {
+        "location": "Muskogee, OK",
+        "utility_index": "97.5",
+        "grocery_index": "98.0"
+      },
+      {
+        "location": "Myrtle Beach, SC",
+        "utility_index": "104.5",
+        "grocery_index": "105.7"
+      },
+      {
+        "location": "Nacogdoches, TX",
+        "utility_index": "97.7",
+        "grocery_index": "91.0"
+      },
+      {
+        "location": "Nashville-Franklin, TN",
+        "utility_index": "82.6",
+        "grocery_index": "91.7"
+      },
+      {
+        "location": "Nassau County, NY",
+        "utility_index": "140.7",
+        "grocery_index": "123.0"
+      },
+      {
+        "location": "New Haven, CT",
+        "utility_index": "123.5",
+        "grocery_index": "117.9"
+      },
+      {
+        "location": "New York, NY",
+        "utility_index": "165.0",
+        "grocery_index": "130.6"
+      },
+      {
+        "location": "Manhattan, NY",
+        "utility_index": "169.6",
+        "grocery_index": "154.3"
+      },
+      {
+        "location": "Queens, NY",
+        "utility_index": "172.0",
+        "grocery_index": "128.3"
+      },
+      {
+        "location": "Newark-Elizabeth, NJ",
+        "utility_index": "129.2",
+        "grocery_index": "111.6"
+      },
+      {
+        "location": "Norman, OK",
+        "utility_index": "91.6",
+        "grocery_index": "95.3"
+      },
+      {
+        "location": "Oakland, CA",
+        "utility_index": "94.7",
+        "grocery_index": "116.8"
+      },
+      {
+        "location": "Odessa, TX",
+        "utility_index": "88.8",
+        "grocery_index": "91.2"
+      },
+      {
+        "location": "Oklahoma City, OK",
+        "utility_index": "88.1",
+        "grocery_index": "92.9"
+      },
+      {
+        "location": "Olympia, WA",
+        "utility_index": "82.1",
+        "grocery_index": "107.4"
+      },
+      {
+        "location": "Omaha, NE",
+        "utility_index": "89.9",
+        "grocery_index": "92.0"
+      },
+      {
+        "location": "Orange County, CA",
+        "utility_index": "103.2",
+        "grocery_index": "104.5"
+      },
+      {
+        "location": "Orlando, FL",
+        "utility_index": "108.5",
+        "grocery_index": "97.8"
+      },
+      {
+        "location": "Paducah, KY",
+        "utility_index": "96.5",
+        "grocery_index": "94.8"
+      },
+      {
+        "location": "Palm Springs, CA",
+        "utility_index": "112.7",
+        "grocery_index": "111.5"
+      },
+      {
+        "location": "Panama City, FL",
+        "utility_index": "99.7",
+        "grocery_index": "93.7"
+      },
+      {
+        "location": "Paris, TX",
+        "utility_index": "87.4",
+        "grocery_index": "93.6"
+      },
+      {
+        "location": "Pascagoula, MS",
+        "utility_index": "91.4",
+        "grocery_index": "101.0"
+      },
+      {
+        "location": "Peoria, IL",
+        "utility_index": "97.2",
+        "grocery_index": "93.4"
+      },
+      {
+        "location": "Philadelphia, PA",
+        "utility_index": "135.9",
+        "grocery_index": "124.9"
+      },
+      {
+        "location": "Phoenix, AZ",
+        "utility_index": "96.6",
+        "grocery_index": "108.1"
+      },
+      {
+        "location": "Pittsburgh, PA",
+        "utility_index": "97.0",
+        "grocery_index": "104.1"
+      },
+      {
+        "location": "Pittsfield, MA",
+        "utility_index": "161.9",
+        "grocery_index": "115.0"
+      },
+      {
+        "location": "Plano, TX",
+        "utility_index": "103.9",
+        "grocery_index": "101.3"
+      },
+      {
+        "location": "Plattsburgh, NY",
+        "utility_index": "119.4",
+        "grocery_index": "98.9"
+      },
+      {
+        "location": "Ponca City, OK",
+        "utility_index": "93.0",
+        "grocery_index": "94.8"
+      },
+      {
+        "location": "Portland, ME",
+        "utility_index": "102.9",
+        "grocery_index": "101.8"
+      },
+      {
+        "location": "Portland, OR",
+        "utility_index": "87.1",
+        "grocery_index": "105.8"
+      },
+      {
+        "location": "Prescott-Prescott Valley, AZ",
+        "utility_index": "91.8",
+        "grocery_index": "95.2"
+      },
+      {
+        "location": "Providence, RI",
+        "utility_index": "129.0",
+        "grocery_index": "113.4"
+      },
+      {
+        "location": "Pryor Creek, OK",
+        "utility_index": "82.7",
+        "grocery_index": "95.0"
+      },
+      {
+        "location": "Pueblo, CO",
+        "utility_index": "80.1",
+        "grocery_index": "100.5"
+      },
+      {
+        "location": "Quincy, IL",
+        "utility_index": "95.5",
+        "grocery_index": "97.4"
+      },
+      {
+        "location": "Raleigh, NC",
+        "utility_index": "105.6",
+        "grocery_index": "104.2"
+      },
+      {
+        "location": "Reno-Sparks, NV",
+        "utility_index": "91.2",
+        "grocery_index": "105.4"
+      },
+      {
+        "location": "Richmond, IN",
+        "utility_index": "106.4",
+        "grocery_index": "83.3"
+      },
+      {
+        "location": "Richmond, VA",
+        "utility_index": "113.9",
+        "grocery_index": "103.6"
+      },
+      {
+        "location": "Rio Rancho, NM",
+        "utility_index": "88.6",
+        "grocery_index": "92.0"
+      },
+      {
+        "location": "Riverside City, CA",
+        "utility_index": "99.9",
+        "grocery_index": "104.9"
+      },
+      {
+        "location": "Roanoke, VA",
+        "utility_index": "104.1",
+        "grocery_index": "89.7"
+      },
+      {
+        "location": "Rochester, MN",
+        "utility_index": "104.8",
+        "grocery_index": "89.6"
+      },
+      {
+        "location": "Rochester, NY",
+        "utility_index": "114.4",
+        "grocery_index": "94.6"
+      },
+      {
+        "location": "Rockford, IL",
+        "utility_index": "111.2",
+        "grocery_index": "92.6"
+      },
+      {
+        "location": "Roswell, NM",
+        "utility_index": "104.3",
+        "grocery_index": "105.6"
+      },
+      {
+        "location": "Round Rock, TX",
+        "utility_index": "107.0",
+        "grocery_index": "81.9"
+      },
+      {
+        "location": "Sacramento, CA",
+        "utility_index": "109.6",
+        "grocery_index": "114.7"
+      },
+      {
+        "location": "Salina, KS",
+        "utility_index": "87.0",
+        "grocery_index": "86.9"
+      },
+      {
+        "location": "Salt Lake City, UT",
+        "utility_index": "72.5",
+        "grocery_index": "100.1"
+      },
+      {
+        "location": "San Angelo, TX",
+        "utility_index": "106.0",
+        "grocery_index": "89.3"
+      },
+      {
+        "location": "San Antonio, TX",
+        "utility_index": "82.8",
+        "grocery_index": "84.9"
+      },
+      {
+        "location": "San Diego, CA",
+        "utility_index": "101.9",
+        "grocery_index": "105.5"
+      },
+      {
+        "location": "San Francisco, CA",
+        "utility_index": "94.5",
+        "grocery_index": "111.9"
+      },
+      {
+        "location": "San Jose, CA",
+        "utility_index": "137.2",
+        "grocery_index": "115.3"
+      },
+      {
+        "location": "San Marcos, TX",
+        "utility_index": "86.8",
+        "grocery_index": "88.7"
+      },
+      {
+        "location": "Sarasota, FL",
+        "utility_index": "97.4",
+        "grocery_index": "107.7"
+      },
+      {
+        "location": "Savannah, GA",
+        "utility_index": "94.0",
+        "grocery_index": "94.7"
+      },
+      {
+        "location": "Seattle, WA",
+        "utility_index": "85.7",
+        "grocery_index": "115.1"
+      },
+      {
+        "location": "Seguin, TX",
+        "utility_index": "103.8",
+        "grocery_index": "90.7"
+      },
+      {
+        "location": "Sheboygan, WI",
+        "utility_index": "117.3",
+        "grocery_index": "94.3"
+      },
+      {
+        "location": "Shreveport-Bossier City, LA",
+        "utility_index": "89.4",
+        "grocery_index": "95.2"
+      },
+      {
+        "location": "Sierra Vista, AZ",
+        "utility_index": "97.2",
+        "grocery_index": "96.5"
+      },
+      {
+        "location": "Sioux Falls, SD",
+        "utility_index": "101.6",
+        "grocery_index": "91.5"
+      },
+      {
+        "location": "Slidell-St. Tammany Parish, LA",
+        "utility_index": "82.2",
+        "grocery_index": "95.1"
+      },
+      {
+        "location": "South Bend, IN",
+        "utility_index": "92.3",
+        "grocery_index": "91.3"
+      },
+      {
+        "location": "Spokane, WA",
+        "utility_index": "89.5",
+        "grocery_index": "92.4"
+      },
+      {
+        "location": "Springfield, IL",
+        "utility_index": "79.8",
+        "grocery_index": "89.7"
+      },
+      {
+        "location": "Springfield, MO",
+        "utility_index": "83.2",
+        "grocery_index": "93.2"
+      },
+      {
+        "location": "St. Cloud, MN",
+        "utility_index": "117.2",
+        "grocery_index": "101.7"
+      },
+      {
+        "location": "St. George, UT",
+        "utility_index": "85.9",
+        "grocery_index": "99.9"
+      },
+      {
+        "location": "St. Joseph, MO",
+        "utility_index": "93.7",
+        "grocery_index": "95.4"
+      },
+      {
+        "location": "St. Louis, MO-IL",
+        "utility_index": "92.9",
+        "grocery_index": "98.4"
+      },
+      {
+        "location": "St. Paul, MN",
+        "utility_index": "106.8",
+        "grocery_index": "107.0"
+      },
+      {
+        "location": "Stamford, CT",
+        "utility_index": "121.3",
+        "grocery_index": "121.8"
+      },
+      {
+        "location": "Staunton-Augusta County, VA",
+        "utility_index": "100.0",
+        "grocery_index": "98.3"
+      },
+      {
+        "location": "Stillwater, OK",
+        "utility_index": "97.9",
+        "grocery_index": "95.5"
+      },
+      {
+        "location": "Sumter, SC",
+        "utility_index": "108.4",
+        "grocery_index": "103.4"
+      },
+      {
+        "location": "Syracuse, NY",
+        "utility_index": "118.4",
+        "grocery_index": "98.6"
+      },
+      {
+        "location": "Tacoma, WA",
+        "utility_index": "83.1",
+        "grocery_index": "111.3"
+      },
+      {
+        "location": "Tampa, FL",
+        "utility_index": "93.8",
+        "grocery_index": "96.3"
+      },
+      {
+        "location": "Temple, TX",
+        "utility_index": "107.6",
+        "grocery_index": "83.7"
+      },
+      {
+        "location": "Thomasville-Lexington, NC",
+        "utility_index": "80.7",
+        "grocery_index": "105.5"
+      },
+      {
+        "location": "Topeka, KS",
+        "utility_index": "85.8",
+        "grocery_index": "92.9"
+      },
+      {
+        "location": "Troy-Miami County, OH",
+        "utility_index": "123.3",
+        "grocery_index": "96.4"
+      },
+      {
+        "location": "Truckee-Nevada County, CA",
+        "utility_index": "114.3",
+        "grocery_index": "132.2"
+      },
+      {
+        "location": "Tucson, AZ",
+        "utility_index": "86.7",
+        "grocery_index": "97.2"
+      },
+      {
+        "location": "Tulsa, OK",
+        "utility_index": "95.2",
+        "grocery_index": "91.9"
+      },
+      {
+        "location": "Tupelo, MS",
+        "utility_index": "110.1",
+        "grocery_index": "91.1"
+      },
+      {
+        "location": "Tuscaloosa, AL",
+        "utility_index": "105.9",
+        "grocery_index": "104.9"
+      },
+      {
+        "location": "Twin Falls, ID",
+        "utility_index": "97.0",
+        "grocery_index": "95.5"
+      },
+      {
+        "location": "Tyler, TX",
+        "utility_index": "102.1",
+        "grocery_index": "92.7"
+      },
+      {
+        "location": "Valdosta, GA",
+        "utility_index": "89.0",
+        "grocery_index": "111.8"
+      },
+      {
+        "location": "Vancouver, WA",
+        "utility_index": "91.8",
+        "grocery_index": "96.9"
+      },
+      {
+        "location": "Vero Beach-Indian River, FL",
+        "utility_index": "104.5",
+        "grocery_index": "109.1"
+      },
+      {
+        "location": "Waco, TX",
+        "utility_index": "85.3",
+        "grocery_index": "81.8"
+      },
+      {
+        "location": "Washington-Arlington-Alexandria, DC-VA",
+        "utility_index": "97.3",
+        "grocery_index": "107.9"
+      },
+      {
+        "location": "Waterloo-Cedar Falls, IA",
+        "utility_index": "88.2",
+        "grocery_index": "89.5"
+      },
+      {
+        "location": "Wausau, WI",
+        "utility_index": "98.4",
+        "grocery_index": "100.0"
+      },
+      {
+        "location": "Weatherford, TX",
+        "utility_index": "107.4",
+        "grocery_index": "95.9"
+      },
+      {
+        "location": "Wichita Falls, TX",
+        "utility_index": "84.4",
+        "grocery_index": "91.9"
+      },
+      {
+        "location": "Wichita, KS",
+        "utility_index": "89.7",
+        "grocery_index": "90.5"
+      },
+      {
+        "location": "Williamsport-Lycoming, PA",
+        "utility_index": "127.7",
+        "grocery_index": "103.5"
+      },
+      {
+        "location": "Wilmington, DE",
+        "utility_index": "115.4",
+        "grocery_index": "108.1"
+      },
+      {
+        "location": "Wilmington, NC",
+        "utility_index": "108.5",
+        "grocery_index": "108.0"
+      },
+      {
+        "location": "Winchester, VA-WV",
+        "utility_index": "98.2",
+        "grocery_index": "104.6"
+      },
+      {
+        "location": "Winston-Salem, NC",
+        "utility_index": "88.5",
+        "grocery_index": "98.5"
+      },
+      {
+        "location": "Wooster, OH",
+        "utility_index": "123.4",
+        "grocery_index": "99.5"
+      },
+      {
+        "location": "Yakima, WA",
+        "utility_index": "86.8",
+        "grocery_index": "99.8"
+      },
+      {
+        "location": "York County, PA",
+        "utility_index": "102.6",
+        "grocery_index": "98.4"
+      },
+      {
+        "location": "Youngstown-Warren, OH",
+        "utility_index": "110.2",
+        "grocery_index": "92.6"
+      },
+      {
+        "location": "Yuma, AZ",
+        "utility_index": "112.2",
+        "grocery_index": "107.4"
+      }
+    ]
+  }
+}

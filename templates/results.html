@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+  <head>
+
+    <title>nuLife | Get Your Life Going</title>
+  </head>
+  <body>
+
+  <p>Welcome to <b>nuLife!</b><p>
+
+  {% if energy %}
+
+  {{data}}
+  <p>Milk Cost: {{ milk }}</p> 
+  <p>Utilities Cost: {{ utilities }}</p>
+  <p>Energy Cost: {{ energy }}
+
+  {% else %}
+
+  <p>You're fucked.</p>
+
+  {% endif %}
+
+
+  </body>
+</html>
