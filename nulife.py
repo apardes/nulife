@@ -28,13 +28,31 @@ def remove(item):
 	return i3
 
 
+def gasoline(city, state):
+	client = wolframalpha.Client('QJTV48-7ETLWYVVE3')
+	gas_query = 'gas ' + city + ', ' + state
+	print gas_query
+
+	res = client.query(gas_query)
+
+	
+	gas_neat = search('${:f}/gal  (US dollars per gallon)  (Monday, April 21, 2014)',(next(res.results).text)).fixed
+
+
+	gas_neat = search('${:f}/gal  (US dollars per gallon)  (Monday, April 21, 2014)', gas_raw).fixed
+
+	print gas_neat
+
+	return True
+
+
 @app.route('/results', methods = ['GET'])
 def results(energy, utilities, milk):
 	print "\nSTARTING RESULTS"
 	return render_template('results.html', energy=energy)
 
 
-def calculate(zip_code, salary):
+def calculate(zip_code):
 
 	print "\nSTARTING CALCULATIONS"
 	base_milk = 4.16
@@ -180,7 +198,78 @@ def calculate(zip_code, salary):
 	return final_data
 
 
+@app.route('/liftoff', methods = ['POST'])
+def liftOff(lifechoice, zipcode, salary, carbool, trans, paymentsbool, cartype, payments, insurance, cellbool, cell, rent, nat, cable, gas, groceries, elec):
+	monthly_salary = salary/12
+	sal_af_tax = monthly_salary * .72
+	saved_monthly = sal_af_tax * .15
+	gas_avg = app.config['FLASK_SECRET_KEY']
+	avg_cable = 150
+	month_bal = sal_af_tax - saved_monthly
 
+	cars = {1:10, 2:15, 3:20}
+
+	if carbool == True:
+
+		tank = cars[cartype]
+		gas_month = tank * 2 * gas_avg
+		month_bal = month_bal - gas_month - insurance
+
+
+		if paymentsbool == True:
+			month_bal -= payments
+			
+	else:
+		month_bal -= trans
+
+
+	if cellbool == True:
+		month_bal -= cell
+
+	########### LIFTOFF ##########
+
+	if lifechoice == True:
+
+		avg_groceries = app.config['AVG_GROCERIES']
+		month_bal -= avg_groceries
+		calculate(zipcode)	
+
+		housing = data['housing_prices']
+
+		i = 0
+		avg_house = 0
+
+		for x in housing:
+			avg_house += x
+			i += 1
+
+		avg_house = avg_house/i
+
+		energy = data['energy_raw']
+		elec = search('electricity price \\| {:f}', energy).fixed
+		nat = search('natural gas price \\| ${:f} per', energy).fixed
+
+		#hous_neat = hous_raw.splitlines()
+		
+		elec = " " + str(elec)
+		elec = remove(elec)
+
+		nat = " " + str(nat)
+		nat = remove(nat)
+
+		milk = data['local_milk']
+		utilities = data['local_utilities']
+
+		month_bal = month_bal - utilities
+
+		return jsonify(milk = milk, utilities = utilities, nat = nat, elec = elec, sal_af_tax = sal_af_tax, saved_monthly = saved_monthly, month_bal = month_bal)
+
+
+		########### GET ORGANIZED ##########
+
+	else:
+		
+		month_bal -= groceries
 
 
 @app.route('/', methods = ['GET', 'POST'])
@@ -191,7 +280,7 @@ def index():
 		zip_code = request.form['zip_code']
 		salary = request.form['salary']
 		print salary
-		data = calculate(zip_code, salary)
+		data = calculate(zip_code)
 
 		energy = data['energy_raw']
 		#hous_raw = data['housing_raw']
