@@ -18,6 +18,16 @@ class nuForm(Form):
 	salary = IntegerField('salary')
 
 
+def remove(item):
+	try:
+		i1, i2 = item.split('(')
+	except ValueError:
+		return False
+	i3, i4 = i2.split(',')
+	i3 = float(i3)
+	return i3
+
+
 @app.route('/results', methods = ['GET'])
 def results(energy, utilities, milk):
 	print "\nSTARTING RESULTS"
@@ -47,7 +57,7 @@ def calculate(zip_code, salary):
 
 	#### Calculating local Milk and Utility Costs
 
-	f = open('col_index.json')
+	f = open('col_index2.json')
 	d = f.read()
 	data = json.loads(d)
 
@@ -59,7 +69,7 @@ def calculate(zip_code, salary):
 		shitty, abbr = item['location'].split(', ')
 		if abbr == user_state:
 
-			utility_index = float(item['utility_index'])
+			utility_index = float(item['utilities_index'])
 			#print utility_index
 			milk_index = float(item['grocery_index'])
 
@@ -84,28 +94,93 @@ def calculate(zip_code, salary):
 
 	client = wolframalpha.Client('QJTV48-7ETLWYVVE3')
 	energy_query = 'utilities prices in ' + city + ' ' + state_abbr
+	housing_query = 'fair market rent price ' + city + ' ' + state_abbr
 	print energy_query
+	print housing_query
 	res = client.query(energy_query)
+	hres = client.query(housing_query)
 
 
 
-	print(next(res.results).text)
+	#print(next(res.results).text)
+	#print(next(hres.results).text)
 
 
-	energy_final = (next(res.results).text)
+	energy_raw = (next(res.results).text)
+	housing_raw = (next(hres.results).text)
+
+	print housing_raw
+
+	hous_neat = housing_raw.splitlines()
+
+	print hous_neat
+
+	housing_prices = []
+
+
+	incr = 1
+
+	for item in hous_neat:
+		if incr == 6:
+			break
+
+		item2 = " " + str(item)
+		please = search('\\\\| ${:d} per month  (US dollars per month)', item2)
+		please2 = remove(str(please))
+
+		if please2 == False:
+			ic = 0
+			housing_sum = 0
+			us_fmr = app.config['US_FMR']
+			for item in data['results']['collection1']:
+				print item
+				shitty, abbr  = item['location'].split(', ')
+				print abbr
+				if abbr == user_state:
+					print "wtf"
+					print user_state
+					housing_index = float(item['housing_index'])
+					print housing_index
+					housing_sum = housing_sum + housing_index
+
+				ic = ic + 1
+				print ic
+			housing_avg = housing_sum/ic
+			print housing_avg
+			housing_percent = housing_avg/100
+			print housing_percent
+
+			housing_prices = []
+
+			for x in us_fmr:
+				x = x * housing_percent
+				print x
+				housing_prices.append(x)
+
+
+
+			final_data = {'energy_raw' : energy_raw, 'local_utilities' : local_utilities, 'local_milk' : local_milk, 'housing_prices' : housing_prices} 
+
+			return final_data
+
+		print please2
+		housing_prices.append(please2)
+		print incr
+		incr = incr + 1
+
+
+	print housing_prices
+
 
 
 	#results(energy_final, local_utilities, local_milk)
 
-	final_data = {'energy_final' : energy_final, 'local_utilities' : local_utilities, 'local_milk' : local_milk}
+	final_data = {'energy_raw' : energy_raw, 'local_utilities' : local_utilities, 'local_milk' : local_milk, 'housing_prices' : housing_prices}
 
 	return final_data
 
 
-def remove(item):
-	i1, i2 = item.split('(')
-	i3, i4 = i2.split(',')
-	return i3
+
 
 
 @app.route('/', methods = ['GET', 'POST'])
@@ -117,17 +192,21 @@ def index():
 		salary = request.form['salary']
 		print salary
 		data = calculate(zip_code, salary)
-		print data
 
-		energy = data['energy_final']
+		energy = data['energy_raw']
+		#hous_raw = data['housing_raw']
 		elec = search('electricity price \\| {:f}', energy).fixed
 		nat = search('natural gas price \\| ${:f} per', energy).fixed
+
+		#hous_neat = hous_raw.splitlines()
 		
 		elec = " " + str(elec)
 		elec = remove(elec)
 
 		nat = " " + str(nat)
 		nat = remove(nat)
+
+
 
 		milk = data['local_milk']
 		utilities = data['local_utilities']
