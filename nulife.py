@@ -13,6 +13,8 @@ import codecs
 app = Flask(__name__)
 app.config.from_object('config')
 
+
+
 class nuForm(Form):
 	zip_code = IntegerField('zip_code')
 	salary = IntegerField('salary')
@@ -61,14 +63,15 @@ def calculate(zip_code):
 	avg_groceries = 294.34
 
 	#### Getting City/State from ZIP
-
+	print zip_code
 	zippo = 'http://api.zippopotam.us/us/'
-	zip_call = zippo + zip_code 
+	zip_call = zippo + "{}".format(zip_code)
 	print zip_call
 	r = requests.get(zip_call)
 	j = r.json()
-
+	print j
 	state = j['places'][0]['state']
+	print state
 	state_abbr = j['places'][0]['state abbreviation']
 	city = j['places'][0]['place name']
 	print city
@@ -203,7 +206,7 @@ def liftOff(lifechoice, zipcode, salary, carbool, trans, paymentsbool, cartype, 
 	monthly_salary = salary/12
 	sal_af_tax = monthly_salary * .72
 	saved_monthly = sal_af_tax * .15
-	gas_avg = app.config['FLASK_SECRET_KEY']
+	gas_avg = app.config['US_GAS_AVG']
 	avg_cable = 150
 	month_bal = sal_af_tax - saved_monthly
 
@@ -232,7 +235,7 @@ def liftOff(lifechoice, zipcode, salary, carbool, trans, paymentsbool, cartype, 
 
 		avg_groceries = app.config['AVG_GROCERIES']
 		month_bal -= avg_groceries
-		calculate(zipcode)	
+		data = calculate(zipcode)	
 
 		housing = data['housing_prices']
 
@@ -247,22 +250,22 @@ def liftOff(lifechoice, zipcode, salary, carbool, trans, paymentsbool, cartype, 
 
 		energy = data['energy_raw']
 		elect = search('electricity price \\| {:f}', energy).fixed
-		natural = search('natural gas price \\| ${:f} per', energy).fixed
+		natura = search('natural gas price \\| ${:f} per', energy).fixed
 
 		#hous_neat = hous_raw.splitlines()
 		
-		elect = " " + str(elect)
-		elect = remove(elec)
+		elec = " " + str(elect)
+		elec = float(remove(elec))
 
-		natural = " " + str(natural)
-		natural = remove(nat)
+		natural = " " + str(natura)
+		natural = float(remove(natural))
 
-		milk = data['local_milk']
-		utilities = data['local_utilities']
+		milk = float(data['local_milk'])
+		utilities = float(data['local_utilities'])
 
-		month_bal = month_bal - utilities
+		month_bal = month_bal - float(utilities)
 
-		return jsonify(milk = milk, utilities = utilities, nat = nat, elec = elec, sal_af_tax = sal_af_tax, saved_monthly = saved_monthly, month_bal = month_bal)
+		return jsonify(milk = milk, utilities = utilities, natural = natural, elec = elec, sal_af_tax = sal_af_tax, saved_monthly = saved_monthly, month_bal = month_bal)
 
 
 		########### GET ORGANIZED ##########
