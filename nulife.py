@@ -265,7 +265,7 @@ def liftOff(lifechoice, zipcode, salary, carbool, trans, paymentsbool, cartype, 
 
 		month_bal = month_bal - float(utilities)
 
-		return jsonify(milk = milk, utilities = utilities, natural = natural, elec = elec, sal_af_tax = sal_af_tax, saved_monthly = saved_monthly, month_bal = month_bal)
+		return json.dumps({'milk':milk, 'utilities':utilities, 'natural':natural, 'elec':elec, 'sal_af_tax':sal_af_tax, 'saved_monthly':saved_monthly, 'month_bal':month_bal})
 
 
 		########### GET ORGANIZED ##########
