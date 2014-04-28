@@ -439,7 +439,7 @@ def liftOffOnline():
 
 
 
-@app.route('/', methods = ['GET', 'POST'])
+@app.route('/blah', methods = ['GET', 'POST'])
 def index():
 	form = nuForm()
 	if request.method == 'POST':
@@ -480,7 +480,7 @@ def results(energy, utilities, milk):
 	return render_template('results.html', energy=energy)
 
 
-@app.route('/test', methods = ['GET', 'POST'])
+@app.route('/', methods = ['GET', 'POST'])
 def testRoute():
 	
 	form = nuForm()
