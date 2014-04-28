@@ -1,0 +1,20 @@
+<!doctype html>
+<html>
+  <head>
+
+    <title>nuLife | Get Your Life Going</title>
+  </head>
+  <body>
+
+  	<p>Welcome to <b>nuLife!</b><p>
+
+  	<form method="POST" action="{{ url_for('liftOffOnline') }}">
+	    Zip Code: {{ form.zipcode }}
+	    Salary: ${{ form.salary }}
+      Transportation Costs: ${{ form.trans }}
+	    <input type="submit" value="Lift Off!">
+  	</form>
+
+
+  </body>
+</html>

@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+  <head>
+
+    <title>nuLife | Get Your Life Going</title>
+  </head>
+  <body>
+
+  	<p>Welcome to <b>nuLife!</b><p>
+
+    <p> Results for {{ city }}, {{ state_abbr }}</p>
+
+    <p>{{ milk }}</p>
+    <p>Local {{ electricity }}</p>
+    <p>Local {{ natural_gas }}</p>
+    <p>{{ local_utils }}</p>
+    <p>Average monthly cost of transportation: ${{ transportation }}</p>
+    <p>Your monthly salary after taxes: ${{ monthly_sal_af_tax }}</p>
+    <p>Recommended savings each month: ${{ monthly_savings }}</p>
+    <p>Total monthly expenses: ${{ monthly_expenses }}</p>
+    <p>Local rent for various sized homes: </p>
+    {% for item in neat_housing %}
+      <p>{{ item }}</p>
+    {% endfor %}
+    <p>Your balance at the end of each month: ${{ monthly_bal }}</p>
+
+  </body>
+</html>
