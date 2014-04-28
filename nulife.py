@@ -13,7 +13,14 @@ import codecs
 app = Flask(__name__)
 app.config.from_object('config')
 
-
+@app.route('/testpoint', methods = ['POST'])
+def testpoint():
+	try:
+		name = request.values['name']
+		print name
+	except KeyError:
+		return "Something went wrong."
+	return jsonify(name = name)
 
 class nuForm(Form):
 	zip_code = IntegerField('zip_code')
@@ -30,57 +37,193 @@ def remove(item):
 	return i3
 
 
+def zippo(zipcode):
+	url = 'http://api.zippopotam.us/us/'
+	zippo_call = url + "{}".format(zipcode)
+	r = requests.get(zippo_call)
+	j = r.json()
+	state = j['places'][0]['state']
+	state_abbr = j['places'][0]['state abbreviation']
+	city = j['places'][0]['place name']
+
+	return json.dumps({'city':city, "state":state, 'state_abbr':state_abbr})
+
+
 def gasoline(city, state):
 	client = wolframalpha.Client('QJTV48-7ETLWYVVE3')
 	gas_query = 'gas ' + city + ', ' + state
 	print gas_query
-
 	res = client.query(gas_query)
+	gas_raw = ()
 
-	
-	gas_neat = search('${:f}/gal  (US dollars per gallon)  (Monday, April 21, 2014)',(next(res.results).text)).fixed
+	#gas_neat = search('${:f}/gal  (US dollars per gallon)  (Monday, April 21, 2014)',(next(res.results).text)).fixed
 
 
-	gas_neat = search('${:f}/gal  (US dollars per gallon)  (Monday, April 21, 2014)', gas_raw).fixed
-
+	gas_neat = search('$\\{:f}/\\gal  (US dollars per gallon)  (Monday, April 21, 2014)', gas_raw).fixed
 	print gas_neat
-
 	return True
 
 
-@app.route('/results', methods = ['GET'])
-def results(energy, utilities, milk):
-	print "\nSTARTING RESULTS"
-	return render_template('results.html', energy=energy)
+def utilities(zipcode):
+	pass
+
+@app.route('/organize', methods = ['POST'])
+def organize():
+	salary = float(request.values['salary'])
+	
+	transportation = 0.00
+	monthly_expenses = 0.00
+
+	monthly_sal = salary / float(12)
+	monthly_sal_af_tax = monthly_sal * .72
+	monthly_savings = monthly_sal_af_tax * .15
+
+	### Get city/state from zip or (if provided) just proceed
+	try:
+		zipcode = request.values['zipcode']
+		citystate = zippo(zipcode)
+		citystate = json.loads(citystate)
+		city = citystate['city']
+		state_abbr = citystate['state_abbr']
+
+	except KeyError:
+		city = request.values['city']
+		state_abbr = request.values['state']
+
+	print 'car stuff'
+	### Car stuff
+	try:
+		cartype = request.values['cartype']
+		insurance_year = float(request.values['insurance'])
+		insurance = insurance_year / float(12)
+		try:
+			payments = float(request.values['payments'])
+			monthly_expenses = payments
+
+		except KeyError:
+			payments = 0
+			print "uh oh"
+
+		car_month = car(float(cartype), payments, insurance)
+		print "\nCar Month: ${}".format(car_month)
+		transportation = car_month
+		monthly_expenses = monthly_expenses + transportation
+
+	except KeyError:
+		transportation = float(request.values['trans'])
+		monthly_expenses = monthly_expenses + transportation
+		print monthly_expenses
+
+	print 'phone stuff'
+	### Cell phone stuff
+	try:
+		cell = float(request.values['cell'])
+		monthly_expenses = monthly_expenses + cell
+		print monthly_expenses
+	except KeyError:
+		pass
+
+	print 'living expesnes'
+	### Living expenses
+	rent = float(request.values['rent'])
+	nat = float(request.values['nat'])
+	cable = float(request.values['cable'])
+	gas = float(request.values['gas'])
+	elec = float(request.values['elec'])
+	groceries = float(request.values['groceries'])
+
+	monthly_expenses = monthly_expenses + rent + nat + cable + gas + elec + groceries
+	print monthly_expenses
+
+	monthly_bal = monthly_sal_af_tax - monthly_savings - monthly_expenses
+
+	return jsonify(monthly_bal = monthly_bal, transportation = transportation, monthly_sal_af_tax = monthly_sal_af_tax, monthly_savings = monthly_savings, monthly_expenses = monthly_expenses)
+
+def car(type, payments, insurance):
+	gas_price = app.config['US_GAS_AVG']
+	cars = {1:10, 2:15, 3:20}
+	tank = cars[type]
+	gas_month = 2.00 * tank * gas_price
+	car_total = gas_month + payments + insurance
+
+	return car_total
 
 
-def calculate(zip_code):
+def wolfram(city, state_abbr):
+	client = wolframalpha.Client('QJTV48-7ETLWYVVE3')
+	energy_query = 'utilities prices in ' + city + ' ' + state_abbr
+	housing_query = 'fair market rent price ' + city + ' ' + state_abbr
 
-	print "\nSTARTING CALCULATIONS"
-	base_milk = 4.16
-	print base_milk
-	base_util = 159.22
-	avg_groceries = 294.34
+	eres = client.query(energy_query)
+	hres = client.query(housing_query)
 
-	#### Getting City/State from ZIP
-	print zip_code
-	zippo = 'http://api.zippopotam.us/us/'
-	zip_call = zippo + "{}".format(zip_code)
-	print zip_call
-	r = requests.get(zip_call)
-	j = r.json()
-	print j
-	state = j['places'][0]['state']
-	print state
-	state_abbr = j['places'][0]['state abbreviation']
-	city = j['places'][0]['place name']
-	print city
+	print (next(eres.results).text)
+	print (next(hres.results).text)
 
-	#### Calculating local Milk and Utility Costs
+	eraw = (next(eres.results).text)
+	hraw = (next(hres.results).text)
+
+	hneat = hraw.splitlines()
+
+	housing_prices = []
 
 	f = open('col_index2.json')
 	d = f.read()
 	data = json.loads(d)
+
+	inc1 = 1
+
+	for item in hneat:
+		if inc1 == 5:
+			break
+
+		item = " " + str(item)
+		regex = search('\\\\| ${:d} per month  (US dollars per month)', item)
+		regex = remove(str(regex))
+
+		if regex == False:
+			ic = 0
+			housing_sum = 0
+			us_fmr = app.config['US_FMR']
+			for item in data['results']['collection1']:
+				shitty, abbr  = item['location'].split(', ')
+				print abbr
+				if abbr == state_abbr:
+					housing_index = float(item['housing_index'])
+					print housing_index
+					housing_sum = housing_sum + housing_index
+
+				ic = ic + 1
+			housing_avg = housing_sum/ic
+			print housing_avg
+			housing_percent = housing_avg/100
+			print housing_percent
+
+			housing_prices = []
+
+			for x in us_fmr:
+				x = x * housing_percent
+				print x
+				housing_prices.append(x)
+
+
+
+			final_data = {'energy_raw' : energy_raw, 'local_utilities' : local_utilities, 'local_milk' : local_milk, 'housing_prices' : housing_prices} 
+
+			return final_data
+
+		housing_prices.append(please2)
+		incr = inc1 + 1
+
+	final_data = {'energy_raw' : energy_raw, 'local_utilities' : local_utilities, 'local_milk' : local_milk, 'housing_prices' : housing_prices, 'hneat' : hneat}
+
+	return final_data
+
+def pubtrans():
+	pass
+
+
+def calculate(zip_code):
 
 	user_state = state_abbr
 	i = 0
@@ -113,25 +256,6 @@ def calculate(zip_code):
 
 	#### Wolfram API Calls
 
-	client = wolframalpha.Client('QJTV48-7ETLWYVVE3')
-	energy_query = 'utilities prices in ' + city + ' ' + state_abbr
-	housing_query = 'fair market rent price ' + city + ' ' + state_abbr
-	print energy_query
-	print housing_query
-	res = client.query(energy_query)
-	hres = client.query(housing_query)
-
-
-
-	#print(next(res.results).text)
-	#print(next(hres.results).text)
-
-
-	energy_raw = (next(res.results).text)
-	housing_raw = (next(hres.results).text)
-
-	print housing_raw
-
 	hous_neat = housing_raw.splitlines()
 
 	print hous_neat
@@ -158,7 +282,6 @@ def calculate(zip_code):
 				shitty, abbr  = item['location'].split(', ')
 				print abbr
 				if abbr == user_state:
-					print "wtf"
 					print user_state
 					housing_index = float(item['housing_index'])
 					print housing_index
@@ -202,7 +325,7 @@ def calculate(zip_code):
 
 
 @app.route('/liftoff', methods = ['POST'])
-def liftOff(lifechoice, zipcode, salary, carbool, trans, paymentsbool, cartype, payments, insurance, cellbool, cell, rent, nat, cable, gas, groceries, elec):
+def liftOff(request):
 	monthly_salary = salary/12
 	sal_af_tax = monthly_salary * .72
 	saved_monthly = sal_af_tax * .15
@@ -287,9 +410,10 @@ def index():
 		salary = request.form['salary']
 		print salary
 		data = calculate(zip_code)
-
 		energy = data['energy_raw']
+		
 		#hous_raw = data['housing_raw']
+		
 		elec = search('electricity price \\| {:f}', energy).fixed
 		nat = search('natural gas price \\| ${:f} per', energy).fixed
 
@@ -297,12 +421,8 @@ def index():
 		
 		elec = " " + str(elec)
 		elec = remove(elec)
-
 		nat = " " + str(nat)
 		nat = remove(nat)
-
-
-
 		milk = data['local_milk']
 		utilities = data['local_utilities']
 
@@ -311,6 +431,18 @@ def index():
 	else:
 
 		return render_template('index.html', form = form)
+
+
+
+
+
+@app.route('/results', methods = ['GET'])
+def results(energy, utilities, milk):
+	print "\nSTARTING RESULTS"
+	return render_template('results.html', energy=energy)
+
+
+
 
 
 if __name__ == '__main__':
