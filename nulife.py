@@ -214,15 +214,18 @@ def wolfram(city, state_abbr):
 
 	inc1 = 1
 
-	for item in hneat:
+	for item in hneat[:-1]:
 		if inc1 == 2:
+			print "its going to break"
 			break
 
 		item = " " + str(item)
 		regex = search('\\\\| ${:d} per month  (US dollars per month)', item)
 		regex = remove(str(regex))
+		print regex
 
 		if regex == False:
+			print "REGEX IS FALSE"
 			ic = 0
 			housing_sum = 0
 			us_fmr = app.config['US_FMR']
@@ -340,13 +343,13 @@ def liftOff():
 
 	monthly_bal = monthly_sal_af_tax - monthly_savings - monthly_expenses
 
-	natural_gas = 'Natural Gas: ${}/thousand cubic meters'.format(wdata['natural'])
+	natural_gas = wdata['natural']
 
-	electricity = 'Electricity: ${}/kWh'.format(wdata['electricity'])
+	electricity = wdata['electricity']
 
-	milk = 'Local Price of 1 Gallon of Milk: ${}'.format(wdata['local_milk'])
+	milk = wdata['local_milk']
 
-	local_utils = 'Average Local Monthly Utilities in this Area: ${}'.format(wdata['local_utilities'])
+	local_utils = wdata['local_utilities']
 
 	neat_housing = wdata['hneat']
 
@@ -423,19 +426,19 @@ def liftOffOnline():
 
 	monthly_bal = monthly_sal_af_tax - monthly_savings - monthly_expenses
 
-	natural_gas = 'Natural Gas: ${}/thousand cubic meters'.format(wdata['natural'])
+	natural_gas = wdata['natural']
 
-	electricity = 'Electricity: ${}/kWh'.format(wdata['electricity'])
+	electricity = wdata['electricity']
 
-	milk = 'Local Price of 1 Gallon of Milk: ${}'.format(wdata['local_milk'])
+	milk = wdata['local_milk']
 
-	local_utils = 'Average Local Monthly Utilities: ${}'.format(wdata['local_utilities'])
+	local_utils = wdata['local_utilities']
 
 	neat_housing = wdata['hneat']
 
 	housing_prices = wdata['housing_prices']
 
-	return render_template('ores.html', state_abbr = state_abbr, city = city, electricity = electricity, milk = milk, local_utils = local_utils, neat_housing = neat_housing , natural_gas = natural_gas, monthly_bal = monthly_bal, transportation = transportation, monthly_sal_af_tax = monthly_sal_af_tax, monthly_savings = monthly_savings, monthly_expenses = monthly_expenses)
+	return render_template('ores.html', housing_prices = housing_prices, state_abbr = state_abbr, city = city, electricity = electricity, milk = milk, local_utils = local_utils, neat_housing = neat_housing , natural_gas = natural_gas, monthly_bal = monthly_bal, transportation = transportation, monthly_sal_af_tax = monthly_sal_af_tax, monthly_savings = monthly_savings, monthly_expenses = monthly_expenses)
 
 
 
@@ -483,7 +486,6 @@ def results(energy, utilities, milk):
 @app.route('/', methods = ['GET', 'POST'])
 def testRoute():
 	
-	form = nuForm()
 	if request.method == 'POST':
 		salary = float(request.values['salary'])
 		zipcode = float(request.values['zip_code'])
@@ -493,8 +495,12 @@ def testRoute():
 
 		return render_template('results.html', r = r)
 	else:
-		return render_template('test.html', form = form)
+		return render_template('home.html')
 
+
+@app.route('/test', methods = ['GET', 'POST'])
+def bootstrap():
+	return render_template('test.html')
 
 
 if __name__ == '__main__':

@@ -16,7 +16,7 @@
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
   </head>
-  <body style="padding-top:75px">
+  <body>
 
     <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
       <div class="container">
@@ -30,65 +30,52 @@
       </div>
     </div>
 
+    <div class="container">
+
+      <div class="jumbotron">
+        <h2>Welcome to nuLife!</h2>
+        <p>nuLife is a tool to help recent college graduates get on their feet financially. Go ahead, give it a try!</p>
+      </div>
+
+    </div>
 
     <div class="container">
-      <p class="lead">Local Prices for {{ city }}, {{ state_abbr }}</p>
+
+      <form method="POST" action="{{ url_for('liftOffOnline') }}">
       <div class="row">
-        <table class="table">
-          <tr>
-            <th>Item</th>
-            <th>Price</th>
-          </tr>
-          <tr>
-            <td>1 Gallon of Milk</td>
-            <td>${{ milk }}</td>
-          </tr>
-          <tr>
-            <td>Electricity</td>
-            <td>${{ electricity }}/kWh</td>
-          </tr>
-          <tr>
-            <td>Natural Gas</td>
-            <td>${{ natural_gas }}/thousand cubic feet</td>
-          </tr>  
-          <tr>
-            <td>Total Monthly Utilities</td>
-            <td>${{ local_utils }}</td>
-          </tr>       
-        </table>
+        <div class="col-xs-6 col-md-offset-3">
+          <div class="input-group">
+            <span class="input-group-addon">Zip Code</span>
+            <input name="zipcode" type="text" class="form-control">
+          </div>
+        </div>
       </div>
-
-
       <br>
-      <p class="lead">Fair Market Rent for {zip code}</p>
       <div class="row">
-      {% for item in hneat %}
-        <p>{{ item }}</p>
-      {% endfor %}
+        <div class="col-xs-6 col-md-offset-3">
+          <div class="input-group">
+            <span class="input-group-addon">Salary $</span>
+            <input name="salary" type="text" class="form-control">
+          </div>
+        </div>
+      </div>
+      <br>
+      <div class="row">
+        <div class="col-xs-6 col-md-offset-3">
+          <div class="input-group">
+            <span class="input-group-addon">Monthly Transportation $</span>
+            <input name="trans" type="text" class="form-control">
+          </div>
+        </div>
       </div>
 
       <br>
-      <p class="lead">Your Finances</p>
-      <div class="row">
-        <table class="table">
-          <tr>
-            <td>Monthly Salary After Tax</td>
-            <td>${{ monthly_sal_af_tax }}</td>
-          </tr>
-          <tr>
-            <td>Recommended Monthly Savings</td>
-            <td>${{ monthly_savings }}</td>
-          </tr>
-          <tr>
-            <td>Total Monthly Expenses</td>
-            <td>${{ monthly_expenses }}</td>
-          </tr>  
-          <tr>
-            <td>Balance Each Month</td>
-            <td>${ monthly_bal }}</td>
-          </tr>       
-        </table>
+
+      <div class="col-xs-6 col-md-offset-3">
+        <button type="submit" class="btn btn-primary" action="submit">Lift Off!</button>
       </div>
+     </form>
+
 
 
     </div>
